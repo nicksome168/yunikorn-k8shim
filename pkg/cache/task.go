@@ -175,7 +175,7 @@ func (task *Task) getTaskAllocationID() string {
 	return task.allocationID
 }
 
-func (task *Task) DeleteTaskPod() error {
+func (task *Task) DeleteTaskPod() error { //remove pod arg
 	return task.context.apiProvider.GetAPIs().KubeClient.Delete(task.pod)
 }
 
